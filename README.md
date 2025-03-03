@@ -22,8 +22,6 @@ flowchart TD
   n2 <--> n5["Task 3"]
   n2 <--> n4["Task 2"]
   n2 <--> n3["Task 1"]
-  n7["n7"]
-  n8["n8"]
   
   n2@{ shape: rounded}
   n1@{ shape: rounded}
