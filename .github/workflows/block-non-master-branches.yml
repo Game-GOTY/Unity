@@ -1,25 +1,31 @@
-name: Prevent Non-Master Merge into PROD
+name: Block non master branch merge to PROD
 
 on:
   pull_request:
     branches:
-      - PROD  # Trigger for PROD merges
-      - master # Also trigger for master merges
+      - master
+      - PROD
 
 jobs:
-  check:
+  check-pr-base:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check if PR is from master branch
+    - name: Fetch PR base branch using GitHub API
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "base_ref: $GITHUB_BASE_REF head_ref: $GITHUB_HEAD_REF"
-        # Check if the base branch is PROD and the source branch is not master
-        if [[ $GITHUB_BASE_REF == "PROD" && $GITHUB_HEAD_REF != "master" ]]; then
-          echo "Error: You can only merge from the master branch into PROD!";
-          exit 1;
-        fi
-        # Optionally, allow merging to master from any branch (or add more specific rules)
-        if [[ $GITHUB_BASE_REF == "master" && $GITHUB_HEAD_REF == "master" ]]; then
-          echo "Merging from master to master is allowed";
+        PR_BASE=$(curl -s \
+          -H "Authorization: Bearer $GITHUB_TOKEN" \
+          "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}" | \
+          jq -r '.base.ref')
+
+        echo "PR base branch is: $PR_BASE"
+
+        # Check if the base branch is PROD or master
+        if [[ "$PR_BASE" == "PROD" && "$GITHUB_HEAD_REF" != "master" ]]; then
+          echo "Error: You can only merge from the master branch into PROD!"
+          exit 1
+        elif [[ "$PR_BASE" == "master" ]]; then
+          echo "Merging into master is allowed"
         fi
