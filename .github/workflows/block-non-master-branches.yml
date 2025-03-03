@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - PROD
+      - master  # Also check when the target branch is master
 
 jobs:
   check:
@@ -12,7 +13,7 @@ jobs:
     steps:
     - name: Check if PR is from master branch
       run: |
-        if [[ $GITHUB_HEAD_REF != "master" ]]; then
+        if [[ $GITHUB_HEAD_REF != "master" && $GITHUB_BASE_REF == "PROD" ]]; then
           echo "Error: You can only merge from the master branch into PROD!";
           exit 1;
         fi
