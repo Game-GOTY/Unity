@@ -1,0 +1,2 @@
+# This will make the admin or specified user/team the owners for all files under .github/
+.github/* @knight1972001
