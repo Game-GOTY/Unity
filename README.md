@@ -30,5 +30,4 @@ flowchart TD
   n5@{ shape: rounded}
   n4@{ shape: rounded}
   n3@{ shape: rounded}
-  n7@{ shape: anchor}
-  n8@{ shape: anchor}
+```
