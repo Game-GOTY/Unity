@@ -3,8 +3,8 @@ name: Prevent Non-Master Merge into PROD
 on:
   pull_request:
     branches:
-      - PROD
-      - master  # Also check when the target branch is master
+      - PROD  # Trigger for PROD merges
+      - master # Also trigger for master merges
 
 jobs:
   check:
@@ -13,7 +13,12 @@ jobs:
     steps:
     - name: Check if PR is from master branch
       run: |
-        if [[ $GITHUB_HEAD_REF != "master" && $GITHUB_BASE_REF == "PROD" ]]; then
+        # Check if the base branch is PROD and the source branch is not master
+        if [[ $GITHUB_BASE_REF == "PROD" && $GITHUB_HEAD_REF != "master" ]]; then
           echo "Error: You can only merge from the master branch into PROD!";
           exit 1;
+        fi
+        # Optionally, allow merging to master from any branch (or add more specific rules)
+        if [[ $GITHUB_BASE_REF == "master" && $GITHUB_HEAD_REF == "master" ]]; then
+          echo "Merging from master to master is allowed";
         fi
