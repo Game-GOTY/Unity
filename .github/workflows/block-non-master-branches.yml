@@ -1,0 +1,18 @@
+name: Block non-master branches from merging to PROD
+
+on:
+  pull_request:
+    branches:
+      - 'PROD'
+
+jobs:
+  check-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if PR is coming from master branch
+        run: |
+          if [ "${{ github.event.pull_request.head.ref }}" != "master" ]; then
+            echo "Error: Pull request must come from the 'master' branch to merge into 'PROD'.";
+            exit 1;
+          fi
