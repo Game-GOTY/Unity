@@ -17,7 +17,7 @@ This note will explain our workflow. If you have any questions, please send them
 ### Github Diagram 
 
 ```mermaid
-flowchart TD
+flowchart LR
   n2["Master"] --> n1["PROD"]
   n2 <--> n5["Task 3"]
   n2 <--> n4["Task 2"]
