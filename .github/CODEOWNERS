@@ -1,2 +1,6 @@
-# This will make the admin or specified user/team the owners for all files under .github/
+# This will make you the owner for all files under .github/
 .github/* @knight1972001
+
+# This will make the GameDev team the owner for all files outside .github/
+* @GameDev
+* @Designer
