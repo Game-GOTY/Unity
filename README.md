@@ -18,7 +18,7 @@ This note will explain our workflow. If you have any questions, please send them
 
 ```mermaid
 flowchart LR
-  n1["PROD"] <-- n2["Master"]
+  n1["PROD"] --> n2["Master"]
   n2 <--> n5["Task 3"]
   n2 <--> n4["Task 2"]
   n2 <--> n3["Task 1"]
