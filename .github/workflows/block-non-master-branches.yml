@@ -13,6 +13,7 @@ jobs:
     steps:
     - name: Check if PR is from master branch
       run: |
+        echo "base_ref: $GITHUB_BASE_REF head_ref: $GITHUB_HEAD_REF"
         # Check if the base branch is PROD and the source branch is not master
         if [[ $GITHUB_BASE_REF == "PROD" && $GITHUB_HEAD_REF != "master" ]]; then
           echo "Error: You can only merge from the master branch into PROD!";
@@ -22,4 +23,3 @@ jobs:
         if [[ $GITHUB_BASE_REF == "master" && $GITHUB_HEAD_REF == "master" ]]; then
           echo "Merging from master to master is allowed";
         fi
-        echo "base_ref: $GITHUB_BASE_REF head_ref: $GITHUB_HEAD_REF"
