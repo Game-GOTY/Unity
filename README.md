@@ -74,10 +74,7 @@ git config merge.tool.unityyamlmerge.trustExitCode true
 
 - At this point, everything should be correctly configured.
 
-<picture>
-  <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f975/512.webp" type="image/webp">
-  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f975/512.gif" alt="🥵" width="32" height="32">
-</picture>
+<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f975/512.gif" alt="Alt Text" width="32" />
 
 ### **To Solve a Conflict**
 
@@ -113,10 +110,7 @@ PS C:\GOTY\Game-of-the-Year>
 
 Good luck!
 
-<picture>
-  <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f91e/512.webp" type="image/webp">
-  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f91e/512.gif" alt="🤞" width="32" height="32">
-</picture>
+<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f91e/512.gif" alt="Alt Text" width="32" />
 
 ## Q/A
 
