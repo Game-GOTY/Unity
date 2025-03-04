@@ -86,7 +86,7 @@ git config merge.tool.unityyamlmerge.trustExitCode true
 
 ### **To Solve a Conflict**
 
-- Commit your changes and open a pull request (PR).
+- Commit your changes, dont need open PR.
 - Switch to the `master` branch in GitHub Desktop (leave your changes on your branch).
 - Create a new copy of the `master` branch named **"Conflict-Solve-YourNameHere"**.
 - In the branch navigation, select `Choose a branch to merge into Conflict-Solve-YourNameHere`.
