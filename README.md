@@ -66,6 +66,14 @@ git config --get-all mergetool.unityyamlmerge.cmd
 "D:\Unity\6000.0.27f1\Editor\Data\Tools\UnityYAMLMerge.exe" merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
 ```
 
+- You can check in `./.git/config`, check this section
+
+```sh
+[mergetool "unityyamlmerge"]
+	trustExitCode = false
+	cmd = " \"D:\\Unity\\6000.0.27f1\\Editor\\Data\\Tools\\UnityYAMLMerge.exe\" merge -p \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\" "
+```
+
 - **Set up the exit code:**
 
 ```bash
