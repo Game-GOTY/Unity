@@ -29,3 +29,11 @@ jobs:
         elif [[ "$PR_BASE" == "master" ]]; then
           echo "Merging into master is allowed"
         fi
+
+    - name: Send Discord Notification (Failure)
+      if: failure()  # This ensures it only runs when the job fails
+      run: |
+        curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{"content": "Error: Merge attempt into PROD from a non-master branch. PR ID: ${{ github.event.pull_request.number }} by user: ${{ github.event.pull_request.user.login }}."}' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
