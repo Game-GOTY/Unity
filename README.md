@@ -33,6 +33,91 @@ flowchart LR
   n3@{ shape: rounded}
 ```
 
+### Setup Auto Conflict Solving
+
+- Please refer to the documentation: [Unity Smart Merge](https://docs.unity3d.com/Manual/SmartMerge.html)
+- **Requirements:**
+  - Git must be installed and initialized in your current repository (branch).
+  - Enable ['show hidden files'](https://support.microsoft.com/en-us/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1).
+- Create a branch and work on it.
+- Open a terminal in your local repository (PowerShell, CMD, Git Bash on Windows, or Terminal on Mac).
+- Locate your `UnityYAMLMerge` file (it should be in your Unity Editor folder, not Unity Hub).
+- **Run the following command** (only the bold command!):
+
+```bash
+git config merge.tool unityyamlmerge
+```
+
+- **Replace your path as shown below:**
+
+```bash
+git config mergetool.unityyamlmerge.cmd ' "D:\Unity\6000.0.27f1\Editor\Data\Tools\UnityYAMLMerge.exe" merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED" '
+```
+
+- **To confirm the setup, run the following command:**
+
+```bash
+git config --get-all mergetool.unityyamlmerge.cmd
+```
+
+- The output should resemble:
+
+```bash
+"D:\Unity\6000.0.27f1\Editor\Data\Tools\UnityYAMLMerge.exe" merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+```
+
+- **Set up the exit code:**
+
+```bash
+git config merge.tool.unityyamlmerge.trustExitCode true
+```
+
+- At this point, everything should be correctly configured.
+
+<picture>
+  <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f975/512.webp" type="image/webp">
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f975/512.gif" alt="🥵" width="32" height="32">
+</picture>
+
+### **To Solve a Conflict**
+
+- Commit your changes and open a pull request (PR).
+- Switch to the `master` branch in GitHub Desktop (leave your changes on your branch).
+- Create a new copy of the `master` branch named **"Conflict-Solve-YourNameHere"**.
+- In the branch navigation, select `Choose a branch to merge into Conflict-Solve-YourNameHere`.
+- Select your branch with the changes.
+- A popup will appear with `Resolve conflicts before merge`.
+- Return to the terminal and run the following command:
+
+```bash
+git mergetool -t unityyamlmerge
+```
+
+- If successful, you should see output similar to this:
+
+```sh
+Merging:
+Assets/Scenes/tam giac.unity
+
+Normal merge conflict for 'Assets/Scenes/tam giac.unity':
+  {local}: modified file
+  {remote}: modified file
+Conflicts:
+Conflict handling:
+warning: in the working copy of 'Assets/Scenes/tam giac.unity', LF will be replaced by CRLF the next time Git touches it
+PS C:\GOTY\Game-of-the-Year>
+```
+
+- Return to GitHub Desktop. You should see a popup stating `All conflicts resolved` -> Click **Continue to merge**.
+- Open another PR from your **"Conflict-Solve-YourNameHere"** branch to `master`.
+
+Good luck!
+
+<picture>
+  <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f91e/512.webp" type="image/webp">
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f91e/512.gif" alt="🤞" width="32" height="32">
+</picture>
+
 ## Q/A
 
 - **Q:** What if I open a PR from `task` to `PROD`?
