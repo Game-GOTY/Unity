@@ -123,6 +123,8 @@ Good luck!
 
 <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f91e/512.gif" alt="Alt Text" width="32" />
 
+- To Avoid Git Conflict, **Instead of having one large prefab, break it into nested or modular prefabs. Changes in one nested prefab won’t affect others, reducing the likelihood of conflicts.**
+
 ## Q/A
 
 - **Q:** What if I open a PR from `task` to `PROD`?
