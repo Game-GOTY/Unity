@@ -39,6 +39,9 @@ flowchart LR
 - **Requirements:**
   - Git must be installed and initialized in your current repository (branch).
   - Enable ['show hidden files'](https://support.microsoft.com/en-us/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1).
+  - Change Project setting:
+    - Editor -> Asset Serialization -> Mode: Force Text
+    - Version control -> Mode: Visible Meta Files
 - Create a branch and work on it.
 - Open a terminal in your local repository (PowerShell, CMD, Git Bash on Windows, or Terminal on Mac).
 - Locate your `UnityYAMLMerge` file (it should be in your Unity Editor folder, not Unity Hub).
