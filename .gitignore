@@ -45,7 +45,7 @@ ExportedObj/
 .idea/
 *.iml
 *.iws
-.gitignore
+.sln
 
 # Ignore Python & Shell scripts
 *.pyc
