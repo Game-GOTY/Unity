@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\playerctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|c:\\goty\\game-of-the-year\\assets\\script\\common\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\script\\common\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,19 +15,19 @@
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\npc\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|c:\\goty\\game-of-the-year\\assets\\player\\script\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\player\\script\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|c:\\goty\\game-of-the-year\\assets\\player\\script\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\player\\script\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|c:\\goty\\game-of-the-year\\assets\\player\\script\\groundcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\player\\script\\groundcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\groundcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|c:\\goty\\game-of-the-year\\assets\\script\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\script\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Assets\\Player\\Script\\PlayerState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T00:49:41.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T00:49:41.906Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Assets\\Script\\Singleton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T00:33:14.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T00:33:14.856Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "Assets\\Player\\Script\\Movement.cs",
               "ViewState": "AgIAAHEAAAAAAAAAAAAswIsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T23:35:51.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T23:35:51.605Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "Assets\\Player\\Script\\GroundCheck.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T22:47:59.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T22:47:59.938Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "Assets\\Script\\Common\\Dialogue.cs",
               "ViewState": "AgIAAHEAAAAAAAAAAAAQwIQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T19:24:41.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T19:24:41.758Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "Assets\\NPC\\Script\\PlayerMovement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T19:20:08.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T19:20:08.606Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "Assets\\NPC\\Script\\NPC.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T19:19:59.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T19:19:59.619Z"
             }
           ]
         }
