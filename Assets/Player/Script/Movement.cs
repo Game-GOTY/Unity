@@ -188,12 +188,18 @@ public class Movement : Main
                 animator.SetBool("Falling", true);
             }
         }
-        if (currentState != previousState) Debug.Log("Current State: " + currentState);
+        if (currentState != previousState) Debug.Log("Current State: " + currentState + " Vertical: "+ verticalVelocity);
 
     }
     public virtual PlayerState CurrentState()
     {
         return currentState;
     }
+
+    public virtual float verticalVelocity()
+    {
+        return rb.linearVelocity.y;  
+    }
+
 
 }
