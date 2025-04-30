@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\GOTY\\Game-of-the-Year\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\player\\script\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|c:\\goty\\game-of-the-year\\assets\\ai\\npc\\tasks\\moveaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\ai\\npc\\tasks\\moveaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|c:\\goty\\game-of-the-year\\assets\\player\\script\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,16 +27,16 @@
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\common\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\npc\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\npc\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\script\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|C:\\GOTY\\Game-of-the-Year\\assets\\npc\\script\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5337859B-D955-1E9D-1F16-1EB1AE32526E}|Assembly-CSharp.csproj|solutionrelative:assets\\npc\\script\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOTY\\Game-of-the-Year\\Assets\\NPC\\Script\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\\Script\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GOTY\\Game-of-the-Year\\Assets\\NPC\\Script\\NPC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\\Script\\NPC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "MoveAction.cs",
+              "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\AI\\NPC\\Tasks\\MoveAction.cs",
+              "RelativeDocumentMoniker": "Assets\\AI\\NPC\\Tasks\\MoveAction.cs",
+              "ToolTip": "C:\\GOTY\\Game-of-the-Year\\Assets\\AI\\NPC\\Tasks\\MoveAction.cs",
+              "RelativeToolTip": "Assets\\AI\\NPC\\Tasks\\MoveAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T23:09:32.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerState.cs",
               "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\Player\\Script\\PlayerState.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\PlayerState.cs",
@@ -54,8 +71,7 @@
               "RelativeToolTip": "Assets\\Player\\Script\\PlayerState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T00:49:41.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T00:49:41.906Z"
             },
             {
               "$type": "Document",
@@ -71,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Movement.cs",
               "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\Player\\Script\\Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\Movement.cs",
@@ -84,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GroundCheck.cs",
               "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\Player\\Script\\GroundCheck.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\GroundCheck.cs",
@@ -96,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerCtrl.cs",
               "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\Player\\Script\\PlayerCtrl.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\PlayerCtrl.cs",
@@ -108,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Dialogue.cs",
               "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\Script\\Common\\Dialogue.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Common\\Dialogue.cs",
@@ -120,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\NPC\\Script\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\\Script\\PlayerMovement.cs",
@@ -132,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "NPC.cs",
               "DocumentMoniker": "C:\\GOTY\\Game-of-the-Year\\Assets\\NPC\\Script\\NPC.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\\Script\\NPC.cs",

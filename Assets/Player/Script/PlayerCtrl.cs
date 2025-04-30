@@ -7,7 +7,9 @@ public class PlayerCtrl : Main
     [SerializeField] private Dialogue dialogue; // Reference to Dialogue component
     private Vector3 dialogueBaseScale; // Store Dialogue's original scale
 
-    private float timer = 3;
+    private int timerId = -1;
+    private bool isTimerRunning = false;
+    
     protected override void Start()
     {
         base.Start();
@@ -30,16 +32,28 @@ public class PlayerCtrl : Main
 
     private void Update()
     {
-
         if (playerMovement.CurrentState() == PlayerState.Idling)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
+            if (!isTimerRunning)
             {
-                selfTalk("I should get moving... Otherwise, Founder gonna kick my a**");
+                // Only start timer if not already running
+                timerId = TimerUtility.SetTimeout(3f, () =>
+                {
+                    selfTalk("I should get moving... Otherwise, Founder gonna kick my a**");
+                    isTimerRunning = false; // Reset flag when timer completes
+                });
+                isTimerRunning = true;
             }
-        }else{
-            selfTalk("", 0);
+        }
+        else
+        {
+            // Only clear if timer is actually running
+            if (isTimerRunning)
+            {
+                TimerUtility.ClearTimeout(timerId);
+                selfTalk("", 0);
+                isTimerRunning = false;
+            }
         }
     }
 
@@ -65,6 +79,5 @@ public class PlayerCtrl : Main
         }else{
             dialogue.ShowDialogue(text);
         }
-        timer = 3;
     }
 }

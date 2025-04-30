@@ -14,9 +14,8 @@ public class Dialogue : MonoBehaviour
     private Canvas canvas;
     private Camera mainCamera;
     private bool isDisplaying;
-    private float timer;
+    private int timerId = -1; // Track our timer
 
-   
     void LateUpdate()
     {
         // Keep upright regardless of parent
@@ -58,10 +57,6 @@ public class Dialogue : MonoBehaviour
         HideDialogue();
     }
 
-
-    
-
-    // calculate the duration text display: Rate: 3 words per second + base 1 second.
     private float displayDuration(string text)
     {
         const float rate = 3f;
@@ -118,20 +113,17 @@ public class Dialogue : MonoBehaviour
             // Face camera
             transform.rotation = mainCamera.transform.rotation;
         }
-
-        // Handle dialogue timeout
-        if (isDisplaying)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                HideDialogue();
-            }
-        }
     }
 
     public void ShowDialogue(string text, float duration = -1)
     {
+        // Clear any existing timer
+        if (timerId != -1)
+        {
+            TimerUtility.ClearTimeout(timerId);
+            timerId = -1;
+        }
+
         // Use default duration if none specified
         if (duration < 0)
         {
@@ -142,15 +134,31 @@ public class Dialogue : MonoBehaviour
         this.heightOffset = displayLineSetOff(text);
 
         dialogueText.text = text;
-        timer = duration;
         isDisplaying = true;
 
         dialogueText.gameObject.SetActive(true);
         backgroundImage.gameObject.SetActive(true);
+
+        // Set timer to hide dialogue
+        if (duration > 0)
+        {
+            timerId = TimerUtility.SetTimeout(duration, () => 
+            {
+                HideDialogue();
+                timerId = -1;
+            });
+        }
     }
 
     public void HideDialogue()
     {
+        // Clear timer if hiding manually
+        if (timerId != -1)
+        {
+            TimerUtility.ClearTimeout(timerId);
+            timerId = -1;
+        }
+
         isDisplaying = false;
         dialogueText.gameObject.SetActive(false);
         backgroundImage.gameObject.SetActive(false);
@@ -170,5 +178,14 @@ public class Dialogue : MonoBehaviour
     {
         backgroundOpacity = Mathf.Clamp01(opacity);
         UpdateBackgroundOpacity();
+    }
+
+    private void OnDestroy()
+    {
+        // Clean up any active timers when destroyed
+        if (timerId != -1)
+        {
+            TimerUtility.ClearTimeout(timerId);
+        }
     }
 }
