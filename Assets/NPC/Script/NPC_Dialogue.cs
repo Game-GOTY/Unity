@@ -13,13 +13,13 @@ public class NPC_Dialogue : MonoBehaviour
     [Header("Test NPC Dialogue")]
     [SerializeField] Sprite spriteNPC;
     [SerializeField] string name_NPC;
-    [SerializeField] string[] dialogue;
-
+    // [SerializeField] string[] dialogue; []
+    
 
     private void OnEnable()
     {
         // Test
-        SetUpDialogue(dialogue, spriteNPC, name_NPC);
+        // SetUpDialogue(dialogue, spriteNPC, name_NPC);
     }
 
     void ChangeImageNPC(Sprite spriteNPC)
@@ -55,9 +55,9 @@ public class NPC_Dialogue : MonoBehaviour
         }
     }
 
-    IEnumerator RunDialogue(string[] dialogue)
+    private IEnumerator RunDialogue(string[] dialogues)
     {
-        foreach (string line in dialogue)
+        foreach (string line in dialogues)
         {
             ChangeDialogue(line);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
@@ -67,10 +67,10 @@ public class NPC_Dialogue : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetUpDialogue(string[] dialogue, Sprite spriteNPC, string name)
+    public void SetUpDialogue(string[] dialogues, Sprite spriteNPC, string name)
     {
         ChangeImageNPC(spriteNPC);
         ChangeNameNPC(name);
-        StartCoroutine(RunDialogue(dialogue));
+        StartCoroutine(RunDialogue(dialogues));
     }
 }
