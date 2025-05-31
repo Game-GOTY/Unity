@@ -314,13 +314,17 @@ MonoBehaviour:
   imageNPC: {fileID: 2088403054}
   nameNPC: {fileID: 1084547918}
   dialogueText: {fileID: 1613180041}
-  spriteNPC: {fileID: 932576740597027765, guid: ae72133dacba6ec4eb33ecde48f50e56, type: 3}
-  name_NPC: "N\u1EEF Hi\u1EC7p S\u0129"
-  dialogue:
-  - "Ng\u01B0\u01A1i l\xE0 ai?"
-  - "Ng\u01B0\u01A1i \u0111\u1EBFn \u0111\xE2y l\xE0m g\xEC?"
-  - "Ng\u01B0\u01A1i s\u1EBD gi\xFAp ta ch\u1EE9?"
-  - "Ch\xFAng ta \u0111i th\xF4i!"
+  dialogues:
+  - _spriteNPC: {fileID: 21300000, guid: f472ef5f9af40bb48947e2133766e261, type: 2}
+    _nameNPC: "N\u1EEF hi\u1EC7p s\u0129"
+    _dialogue:
+    - "Ch\xE0o b\u1EA1n!"
+    - "B\u1EA1n \u0111i \u0111\xE2u th\u1EBF?"
+  - _spriteNPC: {fileID: 21300000, guid: f472ef5f9af40bb48947e2133766e261, type: 2}
+    _nameNPC: Player
+    _dialogue:
+    - "Ch\xE0o. T\xF4i \u0111i ch\u01A1i"
+  index: 0
 --- !u!1 &510362464
 GameObject:
   m_ObjectHideFlags: 0
