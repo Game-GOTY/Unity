@@ -1,7 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+[System.Serializable]
+public class DialogueInfo
+{
+    public Sprite _spriteNPC;
+    public string _nameNPC;
+    public string[] _dialogue;
 
+    public DialogueInfo(Sprite spriteNPC, string nameNPC, string[] dialogue)
+    {
+        _spriteNPC = spriteNPC;
+        _nameNPC = nameNPC;
+        _dialogue = dialogue;
+    }
+}
 public class NPC_Dialogue : MonoBehaviour
 {
     [SerializeField] Image imageNPC;
@@ -9,24 +23,17 @@ public class NPC_Dialogue : MonoBehaviour
     [SerializeField] Text dialogueText;
     Coroutine currentTypingCoroutine;
 
-
-    [Header("Test NPC Dialogue")]
-    [SerializeField] Sprite spriteNPC;
-    [SerializeField] string name_NPC;
-    // [SerializeField] string[] dialogue; []
-    
-
-    private void OnEnable()
-    {
-        // Test
-        // SetUpDialogue(dialogue, spriteNPC, name_NPC);
-    }
-
+    public DialogueInfo[] dialogues;
+    public int index = 0;
+    //private void OnEnable()
+    //{
+    //    //Test
+    //    SetUpDialogue(dialogues[index]._dialogue, dialogues[index]._spriteNPC, dialogues[index]._nameNPC);
+    //}
     void ChangeImageNPC(Sprite spriteNPC)
     {
         imageNPC.sprite = spriteNPC;
     }
-
     void ChangeNameNPC(string name)
     {
         nameNPC.text = name;
@@ -55,16 +62,23 @@ public class NPC_Dialogue : MonoBehaviour
         }
     }
 
-    private IEnumerator RunDialogue(string[] dialogues)
+    private IEnumerator RunDialogue(string[] dialogue)
     {
-        foreach (string line in dialogues)
+        foreach (string line in dialogue)
         {
             ChangeDialogue(line);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             yield return new WaitUntil(() => Input.GetMouseButtonUp(0)); 
         }
-
-        gameObject.SetActive(false);
+        index++;
+        if (index < dialogues.Length)
+        {
+            SetUpDialogue(dialogues[index]._dialogue, dialogues[index]._spriteNPC, dialogues[index]._nameNPC);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void SetUpDialogue(string[] dialogues, Sprite spriteNPC, string name)
